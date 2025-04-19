@@ -1,51 +1,72 @@
-## Summary:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tip Analysis Summary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      max-width: 800px;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    img {
+      display: block;
+      margin: 15px 0;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
 
-This project focuses on analyzing tipping behavior using a dataset of restaurant bills and tips. The analysis aims to uncover key insights about how different factors—such as the time of day, day of the week, customer gender, and smoking status—affect tipping patterns.
+  <h2>Summary</h2>
+  <p>This project analyzes tipping behavior based on a dataset of restaurant bills. It uncovers patterns and relationships between various customer attributes and tip amounts to inform better business decisions.</p>
 
----
+  <h2>1. Problem Statement</h2>
+  <p>Tipping is vital to restaurant staff earnings, yet it can vary based on many factors. This analysis investigates what influences tip amounts—like day, time, gender, and smoker status—to help businesses optimize service strategies and better understand customer behavior.</p>
 
-### 1. Problem Statement
+  <h2>2. Questions Addressed</h2>
+  <ul>
+    <li>What are the key descriptive statistics for numerical variables?</li>
+    <li>How are the categorical variables distributed?</li>
+    <li>What is the relationship between total bill and tip?</li>
+    <li>How do tips vary by day, time, gender, and smoking status?</li>
+    <li>Is there a pattern between party size and tip amount?</li>
+  </ul>
 
-Restaurants rely on tips as a major component of employee income, but tipping behavior can vary significantly. The goal of this project is to analyze and understand what factors influence the amount of tips given. By exploring this data, businesses can make informed decisions about staffing, service timing, and customer engagement strategies.
+  <h2>3. Data Analysis Key Findings</h2>
+  <ul>
+    <li><strong>Data Cleaning:</strong> One duplicate was removed. No missing or inconsistent data types found.</li>
+    <li><strong>Descriptive Stats:</strong> Average total bill = $19.81 (SD = $8.91), Average tip = $3.00 (SD = $1.39)</li>
+    <li><strong>Correlation:</strong> Tip and total bill show a strong positive correlation (0.675).</li>
+    <li><strong>By Day:</strong> Tips are typically higher on Saturday and Sunday.</li>
+    <li><strong>By Time:</strong> Dinner tips are higher than lunch tips.</li>
+    <li><strong>By Gender:</strong> Males tend to give slightly higher tips than females.</li>
+    <li><strong>By Smoker Status:</strong> Minimal difference between smokers and non-smokers.</li>
+    <li><strong>Party Size and Tips:</strong> Larger groups tend to give more tips, as shown in scatter plots.</li>
+  </ul>
 
----
+  <h3>Box Plot: Tip Distribution by Day</h3>
+  <p>The following box plot (<code>box.png</code>) shows that weekends, especially Sunday, tend to have higher and more variable tips:</p>
+  <img src="box.png" alt="Box plot of tips by day of the week">
 
-### 2. Q&A
+  <h3>Scatter Plot: Total Bill vs Tip</h3>
+  <p>The scatter plot (<code>scatter.png</code>) illustrates a strong positive relationship between total bill and tip amount:</p>
+  <img src="scatter.png" alt="Scatter plot of total bill and tips">
 
-Although no explicit questions were provided, the analysis was designed to answer the following:
+  <h2>4. Insights & Next Steps</h2>
+  <ul>
+    <li><strong>Outlier Detection:</strong> Investigate extreme values in tip and bill amounts for potential trends or anomalies.</li>
+    <li><strong>Interaction Effects:</strong> Explore if variables like time or day interact with total bill to affect tipping.</li>
+    <li><strong>Modeling:</strong> Consider regression or classification models to predict tip amounts or tipping behavior.</li>
+  </ul>
 
-* What are the key descriptive statistics of the numerical variables?
-* How are the categorical variables distributed?
-* What are the relationships between total bill and tip amounts?
-* How do tips vary by day of the week, time of day, gender, and smoker status?
-* What is the relationship between party size and tip amount?
-
----
-
-### 3. Data Analysis Key Findings
-
-* **Data Cleaning:** One duplicate row was removed. No missing values or data type issues were found.
-* **Descriptive Statistics:** 
-  * Average total bill: \$19.81 (SD = \$8.91)  
-  * Average tip: \$3.00 (SD = \$1.39)
-* **Correlation Analysis:**
-  * Total bill & tip: **strong positive correlation** (0.675)
-  * Total bill & party size: **moderate positive** (0.598)
-  * Tip & party size: **moderate positive** (0.488)
-* **By Day:** Tips are higher on **Saturday and Sunday**.
-* **By Time:** **Dinner** receives higher average tips than lunch.
-* **By Gender:** **Male** customers give slightly higher tips on average.
-* **By Smoker Status:** Very minimal difference between **smokers and non-smokers**.
-* **Party Size and Tip:** Scatter plot shows a trend suggesting **larger parties tend to tip more**, possibly influenced by smoker status.
-
----
-
-### 4. Insights or Next Steps
-
-* **Investigate Outliers:** Examine extreme values in `total_bill` and `tip` for further patterns or data issues.
-* **Explore Interactions:** Use statistical models or advanced visualizations to explore relationships like:
-  * Does the day of the week affect the link between bill amount and tips?
-  * Is the impact of party size on tips different for lunch vs dinner?
-* **Model Building:** Consider building predictive models to forecast tip amounts based on available features.
-
----
+</body>
+</html>
