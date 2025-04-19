@@ -25,7 +25,7 @@ By leveraging data visualization and statistical analysis, we uncover how factor
 ### 📷 Survival Distribution Histogram
 This histogram illustrates the overall distribution of passengers who survived versus those who didn't:
 
-![Survival Histogram showing survival distribution](histogram.JPG)
+![Survival Histogram showing survival distribution](box.png)
 
 ## ✅ Conclusion
 The Titanic dataset highlights how socio-economic status and gender influenced chances of survival.  
