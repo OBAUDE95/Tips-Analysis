@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Titanic Survival Analysis</title>
+  <title>Titanic Survival Analysis.</title>
   <style>
     body {
       font-family: Arial, sans-serif;
